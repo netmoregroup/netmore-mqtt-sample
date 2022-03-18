@@ -2,10 +2,10 @@
 var mqtt = require('mqtt');
 var fs = require('fs');
 
-const url = "mqtts://mqttdev.dev.netmoregroup.com";
-const ca = "./certs/ca.crt";
-const cert = "./certs/client.crt";
-const key = "./certs/client.key";
+const url = "mqtts://mqtt.netmoregroup.com";
+const ca = "./certs/952/ca.crt";
+const cert = "./certs/952/client.crt";
+const key = "./certs/952/client.key";
 
 if( process.argv.length !== 3 ) {
   console.error(`Id from cert not given! use ca name as is. openssl x509 -in ${cert} -noout -text`);
