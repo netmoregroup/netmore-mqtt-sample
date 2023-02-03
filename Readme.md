@@ -1,4 +1,4 @@
-# Netmore mqtt sample application.
+# Netmore edge mqtt sample application.
 
 This sample application is writen in javascript as it's common 
 to most developers. If node is to be used we recomment typescript.
