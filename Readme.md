@@ -7,7 +7,7 @@ to most developers. If node is to be used we recomment typescript.
 unpackage the certs you have recived into the cert directory, when done it should look
 likt below
 
-    ls ./certs/
+    ls ./certs/<CommonName>/
     ca.crt  
     client.crt
     client.key
