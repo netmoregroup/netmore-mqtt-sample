@@ -26,4 +26,4 @@ this can be retrived in varios ways but the simplest is
 Once you found the CN short for common name you can add that as the last 
 argument to the command below.
 
-    node smaple.js \<CommonName>
+    node smaple.js <CommonName>
