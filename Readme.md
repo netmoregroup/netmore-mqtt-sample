@@ -27,3 +27,40 @@ Once you found the CN short for common name you can add that as the last
 argument to the command below.
 
     node smaple.js <CommonName>
+
+## Payload Desciption
+  {
+    t: timestamp (number or string),
+    rw: read write (boolean)
+    i: information (string),
+    n: name (string),
+    u: unit (string),
+    v: value 
+  }
+  
+## Payload Sample
+Message topic: client/c123/edge/e123/netmore/dp/evt/lorac/blink/uwpa/0019eeb000000xxx/s/snr 
+
+    [
+      {
+        t: 1687333993477,
+        rw: false,
+        i: '0019eeb000000467',
+        n: 'snr',
+        u: 'db',
+        v: 7.5
+      }
+    ]
+
+Message topic: client/c123/edge/e123/netmore/dp/evt/lorac/blink/uwpa/0019eeb000000xxx/s/Energy_Total 
+
+    [
+      {
+        t: 1687333800000,
+        rw: false,
+        i: '60',
+        n: 'Energy Total',
+        u: 'kWh',
+        v: 261.6
+      }
+    ]
