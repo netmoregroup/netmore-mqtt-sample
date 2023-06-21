@@ -29,14 +29,15 @@ argument to the command below.
     node smaple.js <CommonName>
 
 ## Payload Desciption
-  {
-    t: timestamp (number or string),
-    rw: read write (boolean)
-    i: information (string),
-    n: name (string),
-    u: unit (string),
-    v: value 
-  }
+
+      [{
+        t: timestamp (number or string),
+        rw: read write (boolean)
+        i: information (string),
+        n: name (string),
+        u: unit (string),
+        v: value 
+      }]
   
 ## Payload Sample
 Message topic: client/c123/edge/e123/netmore/dp/evt/lorac/blink/uwpa/0019eeb000000xxx/s/snr 
