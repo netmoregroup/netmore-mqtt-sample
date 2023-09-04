@@ -131,3 +131,97 @@ Message topic: client/c123/edge/e123/netmore/raw/evt/blink/a81758ffxxxxxx/elt_2_
         }
       }
     ]
+
+
+# Sample value and units 
+
+| Property | Unit | Description |
+| --- | --- | --- |
+| battery | number | V |
+| external_sensors | ExternalSensor[] |  |
+| externalPower | boolean |  |
+| confirmedUplinks | "unconfirmed" \| "confirmed" |  |
+| adaptiveDataRate | boolean |  |
+| communicationPeriod | PeriodTime |  |
+| mbusSpeed | number |  |
+| dataCollectionPeriod | PeriodTime |  |
+| temperature | number | C |
+| latitude | number |  |
+| longitude | number |  |
+| accuracy | number | m |
+| inTrip | boolean |  |
+| manDown | boolean | (no movement for configured period) |
+| inclination | number | degrees |
+| azimuth | number |  |
+| heading | number | degrees |
+| speed | number | km/h |
+| altitude | number |  |
+| pitch | number | degrees |
+| roll | number | degrees |
+| hdop | number | Horizontal Dilution of Precision |
+| antennas | number | count |
+| firmware | string |  |
+| humidity | number | RH% |
+| pressure | number | Pa |
+| co2 | number | Carbon Dioxide ppm |
+| o2 | number | Oxygen %vol |
+| co | number | CO Carbon Monoxide ppm |
+| ozone | number | Ozone ppm |
+| motion | number | count |
+| previousMotion | number | count |
+| tvoc | number | ppb |
+| bvoc | number | ppm Breath VOC Estimate equivalent |
+| airQuality | number | IAQ index, 0-50 excellent, 51-100 good, 101-150, Light pollution, 151-200 - Moderate pollution, 201-250 Heavily polluted, 251-350 Severely polluted, 351 > Extremely polluted |
+| vdd | number | mV |
+| illuminance | number | lx |
+| light | number | lx |
+| volume | number | m^3 |
+| energy | number | kWh |
+| leakState | boolean |  |
+| leakStateCounter | number | count |
+| leakDuration | number | s seconds |
+| timestamp | number | time_t |
+| errorText | string |  |
+| controlValveState | boolean |  |
+| outputValveState | boolean |  |
+| presence | boolean |  |
+| presenceCounterA | number |  |
+| presenceCounterB | number |  |
+| totalPresenceCounterA | number |  |
+| totalPresenceCounterB | number |  |
+| openState | "open" \| "closed" |  |
+| openCounter | number | count |
+| lastOpenDuration | number | s seconds |
+| occupied | boolean |  |
+| tampered | boolean |  |
+| buttonPressed | boolean |  |
+| status | string |  |
+| last_disconnect_duration | number | s second |
+| total_count | number | count |
+| soundLevel | number | dBA |
+| soundPeak | number | dBA |
+| soundAvg | number | dBA |
+| soundMin | number | dBA |
+| soundMax | number | dBA |
+| distance | number | m |
+| pulseCounter1 | number | count absolute values; |
+| pulseIntervalCounter1 | number | count resets for each send. |
+| pulseCounter2 | number | count absolute values; |
+| pulseIntervalCounter2 | number | count resets for each send. |
+| mc_pm0_1 | number | μg/m^3 PM 0.1 Mass Concentration |
+| mc_pm0_3 | number | μg/m^3 |
+| mc_pm0_5 | number | μg/m^3 |
+| mc_pm1_0 | number | μg/m^3 |
+| mc_pm2_5 | number | μg/m^3 |
+| mc_pm4_0 | number | μg/m^3 |
+| mc_pm5_0 | number | μg/m^3 |
+| mc_pm10_0 | number | μg/m^3 |
+| nc_pm0_1 | number | particles/m^3 PM 0.1 Number Concentration |
+| nc_pm0_3 | number | particles/m^3 |
+| nc_pm0_5 | number | particles/m^3 |
+| nc_pm1_0 | number | particles/m^3 |
+| nc_pm2_5 | number | particles/m^3 |
+| nc_pm4_0 | number | particles/m^3 |
+| nc_pm5_0 | number | particles/m^3 |
+| nc_pm10_0 | number | particles/m^3 |
+| pm_tps | number | µm The TPS reading from the sensor is the Typical Particle Size of the particulate matter in µm. |
