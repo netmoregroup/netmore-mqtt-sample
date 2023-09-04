@@ -134,6 +134,9 @@ Message topic: client/c123/edge/e123/netmore/raw/evt/blink/a81758ffxxxxxx/elt_2_
 
 
 # Sample value and units 
+We try to harmonize all sensors so that all sensors give the same output, this is a snapshot of 
+properties that have bin selected so far. 
+Note that not all sensors can be harmonized.
 
 | Property | Unit | Description |
 | --- | --- | --- |
