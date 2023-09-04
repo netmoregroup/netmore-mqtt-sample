@@ -141,13 +141,6 @@ Note that not all sensors can be harmonized.
 | Property | Unit | Description |
 | --- | --- | --- |
 | battery | number | V |
-| external_sensors | ExternalSensor[] |  |
-| externalPower | boolean |  |
-| confirmedUplinks | "unconfirmed" \| "confirmed" |  |
-| adaptiveDataRate | boolean |  |
-| communicationPeriod | PeriodTime |  |
-| mbusSpeed | number |  |
-| dataCollectionPeriod | PeriodTime |  |
 | temperature | number | C |
 | latitude | number |  |
 | longitude | number |  |
