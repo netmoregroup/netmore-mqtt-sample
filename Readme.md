@@ -173,6 +173,7 @@ Note that not all sensors can be harmonized.
 | light | number | lx |
 | volume | number | m^3 |
 | energy | number | kWh |
+| energy total | number | kWh |
 | leakState | boolean |  |
 | leakStateCounter | number | count |
 | leakDuration | number | s seconds |
