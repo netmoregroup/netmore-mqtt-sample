@@ -205,20 +205,5 @@ Note that not all sensors can be harmonized.
 | pulseIntervalCounter1 | number | count resets for each send. |
 | pulseCounter2 | number | count absolute values; |
 | pulseIntervalCounter2 | number | count resets for each send. |
-| mc_pm0_1 | number | μg/m^3 PM 0.1 Mass Concentration |
-| mc_pm0_3 | number | μg/m^3 |
-| mc_pm0_5 | number | μg/m^3 |
-| mc_pm1_0 | number | μg/m^3 |
-| mc_pm2_5 | number | μg/m^3 |
-| mc_pm4_0 | number | μg/m^3 |
-| mc_pm5_0 | number | μg/m^3 |
-| mc_pm10_0 | number | μg/m^3 |
-| nc_pm0_1 | number | particles/m^3 PM 0.1 Number Concentration |
-| nc_pm0_3 | number | particles/m^3 |
-| nc_pm0_5 | number | particles/m^3 |
-| nc_pm1_0 | number | particles/m^3 |
-| nc_pm2_5 | number | particles/m^3 |
-| nc_pm4_0 | number | particles/m^3 |
-| nc_pm5_0 | number | particles/m^3 |
-| nc_pm10_0 | number | particles/m^3 |
-| pm_tps | number | µm The TPS reading from the sensor is the Typical Particle Size of the particulate matter in µm. |
+
+Other values might be avalible for specifice devices as not all values have any sense in harmonizing as thy are sensor specific.
