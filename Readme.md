@@ -60,12 +60,12 @@ argument to the command below.
 
   Sample Raw:
 
-          client/c123/edge/e123/netmore/raw/evt/blink/a81758ffxxxxxx/elt_2_hp
-             |    |    |    |      |     |  |    |       |            |
-             |    |    |    |      |     |  |    |       |        Sensor Type
-             |    |    |    |      |     |  |    |       |    
-             |    |    |    |      |     |  |    |    Sensor Id
-             |    |    |    |      |     |  |  Backend 
+          client/c123/edge/e123/netmore/raw/evt/lorac/blink/elt_2_hp/a81758ffxxxxxx
+             |    |    |    |      |     |  |    |       |     |            |
+             |    |    |    |      |     |  |    |       |     |        Sensor Id
+             |    |    |    |      |     |  |    |       |  Sensor Type
+             |    |    |    |      |     |  |    |    Backend 
+             |    |    |    |      |     |  |  packet sourc 
              |    |    |    |      |     | Constant identifier             
              |    |    |    |      |   raw - Raw data packet. 
              |    |    |    |   Constant identifier
@@ -101,7 +101,7 @@ Message topic: client/c123/edge/e123/netmore/dp/evt/lorac/blink/uwpa/0019eeb0000
       }
     ]
 
-Message topic: client/c123/edge/e123/netmore/raw/evt/blink/a81758ffxxxxxx/elt_2_hp 
+Message topic: client/c123/edge/e123/netmore/raw/evt/lorac/blink/elt_2_hp/a81758ffxxxxxx 
 
     [
       {
