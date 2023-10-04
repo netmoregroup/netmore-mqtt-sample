@@ -1,4 +1,4 @@
-# <img src="https://avatars.githubusercontent.com/u/93947921?s=200&v=4" width="32"/> Netmore Cloud Control sample application.
+# <img src="https://avatars.githubusercontent.com/u/93947921?s=200&" width="32"/> Netmore Cloud Control sample application.
 
 This sample application is written in javascript as it's common 
 to most developers. If node is to be used we recommend typescript.
