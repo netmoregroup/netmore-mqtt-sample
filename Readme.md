@@ -132,7 +132,16 @@ Message topic: client/c123/edge/e123/netmore/raw/evt/lorac/blink/elt_2_hp/a81758
       }
     ]
 
+# Developer recommedations
+When createing the client subscription there are a few thinks to take into considurations.
+1. Make sure the subscription topic is setup with your client id.
+2. Make use of # e.g subscribe generic topics and not individual items as this will give you
+   a lot of topics on mqtt that is not good for the server or client.
+3. Make sure you do not do any thing that might take time in the reciving thread or make use
+   of shared subscriptions, if the client can not keep up we will eventualy have to start throwing
+   packets.
 
+   
 # Sample value and units 
 We try to harmonize all sensors so that all sensors give the same output, this is a snapshot of 
 properties that have bin selected so far. 
