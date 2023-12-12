@@ -28,7 +28,110 @@ argument to the command below.
 
     node sample.js <CommonName>
 
-## Payload Description
+# Version 2
+
+## Payload Description V2
+    {
+      deviceId: "lorac@blink@sensorType@devEui",
+      edgeId: "e123",
+      sensorType: "sensor type (string)"
+      devEui?: "If applicable devEui is available"
+      data: [{
+        t: timestamp (number or string),
+        rw: read write (boolean)
+        i: information (string),
+        n: name (string),
+        u: unit (string),
+        v: value 
+      }]
+    }
+
+## Topic Description V2
+    
+  Sample Data point:
+
+          client/c123/edge/e123/netmore/dp 
+             |    |    |    |      |     | 
+             |    |    |    |      |   dp - Data point.
+             |    |    |    |   Constant identifier
+             |    |    |   The Edge Id aka group id.
+             |    |  Constant identifier.
+             |   Your customerId.
+          Client is a constant prefix.
+
+  Sample Raw: V2
+
+          client/c123/edge/e123/netmore/raw
+             |    |    |    |      |     | 
+             |    |    |    |      |   raw - Raw data packet. 
+             |    |    |    |   Constant identifier
+             |    |    |   The Edge Id aka group id.
+             |    |  Constant identifier.
+             |   Your customerId.
+          Client is a constant prefix.
+
+## Payload Sample V2
+Message topic: client/c123/edge/e123/netmore/dp
+
+    {
+      deviceId: "lorac@blink@uwpa@0019eeb000000xxx",
+      edgeId: "e123",
+      sensorType: "uwpa",
+      devEui: "0019eeb000000xxx",
+      data: [
+        {
+          t: 1687333993477,
+          rw: false,
+          i: '0019eeb000000467',
+          n: 'snr',
+          u: 'db',
+          v: 7.5
+        },
+        {
+          t: 1687333800000,
+          rw: false,
+          i: '60',
+          n: 'Energy Total',
+          u: 'kWh',
+          v: 261.6
+        }
+      ]
+    }
+
+Message topic: client/c123/edge/e123/netmore/raw
+
+    [
+      {
+        t: 1693849603079,
+        n: 'raw',
+        u: 'json',
+        v: {
+          devEui: 'a81758ffxxxxxx',
+          sensorType: 'elt_2_hp',
+          messageType: 'payload',
+          timestamp: '2023-09-04T17:46:43.079435Z',
+          payload: '0100910262070e380b00031bd51700000973',
+          fCntUp: 76533,
+          toa: null,
+          freq: 867300000,
+          batteryLevel: '254',
+          ack: false,
+          spreadingFactor: '7',
+          dr: 5,
+          rssi: '-87',
+          snr: '11',
+          gatewayIdentifier: '773',
+          fPort: '5',
+          latitude: 67.806233,
+          longitude: 11.685214,
+          gateways: [Array]
+        }
+      }
+    ]
+
+
+# Version 1
+## Payload Description V1
 
       [{
         t: timestamp (number or string),
@@ -38,7 +141,7 @@ argument to the command below.
         u: unit (string),
         v: value 
       }]
-## Topic Description
+## Topic Description V1
     
   Sample Data point:
 
@@ -58,7 +161,7 @@ argument to the command below.
              |   Your customerId.
           Client is a constant prefix.
 
-  Sample Raw:
+  Sample Raw: V1
 
           client/c123/edge/e123/netmore/raw/evt/lorac/blink/elt_2_hp/a81758ffxxxxxx
              |    |    |    |      |     |  |    |       |     |            |
@@ -74,7 +177,7 @@ argument to the command below.
              |   Your customerId.
           Client is a constant prefix.
 
-## Payload Sample
+## Payload Sample V1
 Message topic: client/c123/edge/e123/netmore/dp/evt/lorac/blink/uwpa/0019eeb000000xxx/s/snr 
 
     [
@@ -132,13 +235,13 @@ Message topic: client/c123/edge/e123/netmore/raw/evt/lorac/blink/elt_2_hp/a81758
       }
     ]
 
-# Developer recommedations
-When createing the client subscription there are a few thinks to take into considurations.
+# Developer recommendations
+When creating the client subscription there are a few thinks to take into considerations.
 1. Make sure the subscription topic is setup with your client id.
 2. Make use of # e.g subscribe generic topics and not individual items as this will give you
    a lot of topics on mqtt that is not good for the server or client.
-3. Make sure you do not do any thing that might take time in the reciving thread or make use
-   of shared subscriptions, if the client can not keep up we will eventualy have to start throwing
+3. Make sure you do not do any thing that might take time in the receiving thread or make use
+   of shared subscriptions, if the client can not keep up we will eventually have to start throwing
    packets.
 
    
