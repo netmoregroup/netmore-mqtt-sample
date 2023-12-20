@@ -36,6 +36,7 @@ argument to the command below.
       edgeId: "e123",
       sensorType: "sensor type (string)"
       devEui?: "If applicable devEui is available"
+      tags?: Object containg possible tags.
       data: [{
         t: timestamp (number or string),
         rw: read write (boolean)
@@ -78,6 +79,9 @@ Message topic: client/c123/edge/e123/netmore/dp
       edgeId: "e123",
       sensorType: "uwpa",
       devEui: "0019eeb000000xxx",
+      tags?: {
+         test: [ '123' ]
+      }
       data: [
         {
           t: 1687333993477,
@@ -140,6 +144,7 @@ Message topic: client/c123/edge/e123/netmore/raw
         n: name (string),
         u: unit (string),
         v: value 
+        tags?: tags that are assosiated with the sensor.
       }]
 ## Topic Description V1
     
@@ -188,6 +193,9 @@ Message topic: client/c123/edge/e123/netmore/dp/evt/lorac/blink/uwpa/0019eeb0000
         n: 'snr',
         u: 'db',
         v: 7.5
+        tags: {
+           test: [ '1234' ]
+        }
       }
     ]
 
