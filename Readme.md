@@ -33,7 +33,7 @@ argument to the command below.
 ## Payload Description V2
     {
       deviceId: "lorac@blink@sensorType@devEui",
-      edgeId: "e123",
+      deviceGroupId: "e123",
       sensorType: "sensor type (string)"
       devEui?: "If applicable devEui is available"
       tags?: Object containg possible tags.
@@ -51,32 +51,31 @@ argument to the command below.
     
   Sample Data point:
 
-          client/c123/edge/e123/netmore/dp 
-             |    |    |    |      |     | 
-             |    |    |    |      |   dp - Data point.
-             |    |    |    |   Constant identifier
-             |    |    |   The Edge Id aka group id.
-             |    |  Constant identifier.
+          client/c123/deviceGroups/e123/netmore/dp
+             |    |        |        |     |     data point packet.
+             |    |        |        |    Constant identifier.
+             |    |        |      Device groups identifier
+             |    |       Constant identifier.
              |   Your customerId.
           Client is a constant prefix.
 
   Sample Raw: V2
 
-          client/c123/edge/e123/netmore/raw
-             |    |    |    |      |     | 
-             |    |    |    |      |   raw - Raw data packet. 
-             |    |    |    |   Constant identifier
-             |    |    |   The Edge Id aka group id.
-             |    |  Constant identifier.
+          client/c123/deviceGroups/e123/netmore/raw
+             |    |        |         |      |     | 
+             |    |        |         |      |   raw - Raw data packet. 
+             |    |        |         |   Constant identifier
+             |    |        |       Device groups identifier
+             |    |     Constant identifier.
              |   Your customerId.
           Client is a constant prefix.
 
 ## Payload Sample V2
-Message topic: client/c123/edge/e123/netmore/dp
+Message topic: client/c123/deviceGroups/e123/netmore/dp
 
     {
       deviceId: "lorac@blink@uwpa@0019eeb000000xxx",
-      edgeId: "e123",
+      deviceGroupId: "e123",
       sensorType: "uwpa",
       devEui: "0019eeb000000xxx",
       tags?: {
@@ -102,7 +101,7 @@ Message topic: client/c123/edge/e123/netmore/dp
       ]
     }
 
-Message topic: client/c123/edge/e123/netmore/raw
+Message topic: client/c123/deviceGroups/e123/netmore/raw
 
     [
       {
