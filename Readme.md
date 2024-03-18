@@ -34,6 +34,7 @@ argument to the command below.
     {
       deviceId: "lorac@blink@sensorType@devEui",
       deviceGroupId: "e123",
+      edgeId: "e123", // Depricated !!
       sensorType: "sensor type (string)"
       devEui?: "If applicable devEui is available"
       tags?: Object containg possible tags.
@@ -50,7 +51,7 @@ argument to the command below.
 ## Topic Description V2
     
   Sample Data point:
-
+          
           client/c123/deviceGroups/e123/netmore/dp
              |    |        |        |     |     data point packet.
              |    |        |        |    Constant identifier.
@@ -58,6 +59,8 @@ argument to the command below.
              |    |       Constant identifier.
              |   Your customerId.
           Client is a constant prefix.
+
+          client/c123/edge/e123/netmore/dp // Depicated version
 
   Sample Raw: V2
 
@@ -69,6 +72,8 @@ argument to the command below.
              |    |     Constant identifier.
              |   Your customerId.
           Client is a constant prefix.
+
+          client/c123/edge/e123/netmore/raw // Depicated version
 
 ## Payload Sample V2
 Message topic: client/c123/deviceGroups/e123/netmore/dp
