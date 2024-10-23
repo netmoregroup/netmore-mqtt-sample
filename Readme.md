@@ -35,7 +35,7 @@ argument to the command below.
       deviceId: "lorac@blink@sensorType@devEui",
       deviceGroupId: "e123",
       edgeId: "e123", // Depricated !!
-      deviceType: "sensor type (string)"
+      sensorType: "sensor type (string)"
       devEui?: "If applicable devEui is available"
       tags?: Object containg possible tags.
       data: [{
