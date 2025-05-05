@@ -60,7 +60,6 @@ argument to the command below.
              |   Your customerId.
           Client is a constant prefix.
 
-          client/c123/edge/e123/netmore/dp // Depicated version
 
   Sample Raw: V2
 
@@ -73,7 +72,6 @@ argument to the command below.
              |   Your customerId.
           Client is a constant prefix.
 
-          client/c123/edge/e123/netmore/raw // Depicated version
 
 ## Payload Sample V2
 Message topic: client/c123/deviceGroups/e123/netmore/dp
