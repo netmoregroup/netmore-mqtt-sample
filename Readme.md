@@ -108,10 +108,8 @@ Message topic: client/c123/deviceGroups/e123/netmore/raw
 
     [
       {
-        t: 1693849603079,
-        n: 'raw',
-        u: 'json',
-        v: {
+          deviceId: 'lorac@blink@uwpa@0019eeb000000xxx',
+          deviceGroupId: 'e123'
           devEui: 'a81758ffxxxxxx',
           sensorType: 'elt_2_hp',
           messageType: 'payload',
@@ -131,7 +129,6 @@ Message topic: client/c123/deviceGroups/e123/netmore/raw
           latitude: 67.806233,
           longitude: 11.685214,
           gateways: [Array]
-        }
       }
     ]
 
