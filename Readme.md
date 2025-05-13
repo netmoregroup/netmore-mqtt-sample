@@ -28,16 +28,16 @@ argument to the command below.
 
     node sample.js <CommonName>
 
-# Version 2
+# Decoded Payload Version 2
 
-## Payload Description V2
+## Payload Description Decoded Payload V2
     {
-      deviceId: "lorac@blink@sensorType@devEui",
+      deviceId: "uniq id in the system",
       deviceGroupId: "e123",
-      edgeId: "e123", // Depricated !!
+      edgeId: "e123", // Deprecated !!
       sensorType: "sensor type (string)"
       devEui?: "If applicable devEui is available"
-      tags?: Object containg possible tags.
+      tags?: Object congaing possible tags.
       data: [{
         t: timestamp (number or string),
         rw: read write (boolean)
@@ -48,7 +48,7 @@ argument to the command below.
       }]
     }
 
-## Topic Description V2
+## Topic Description Decoded Payload V2
     
   Sample Data point:
           
@@ -61,23 +61,12 @@ argument to the command below.
           Client is a constant prefix.
 
 
-  Sample Raw: V2
-
-          client/c123/deviceGroups/e123/netmore/raw
-             |    |        |         |      |     | 
-             |    |        |         |      |   raw - Raw data packet. 
-             |    |        |         |   Constant identifier
-             |    |        |       Device groups identifier
-             |    |     Constant identifier.
-             |   Your customerId.
-          Client is a constant prefix.
-
 
 ## Payload Sample V2
 Message topic: client/c123/deviceGroups/e123/netmore/dp
 
     {
-      deviceId: "lorac@blink@uwpa@0019eeb000000xxx",
+      deviceId: "12312355eb000000xxx-de",
       deviceGroupId: "e123",
       sensorType: "uwpa",
       devEui: "0019eeb000000xxx",
@@ -104,11 +93,26 @@ Message topic: client/c123/deviceGroups/e123/netmore/dp
       ]
     }
 
+# MQTT Connect All ( Raw lorawan payload )
+
+## Topic Description MQTT Connect All.
+Sample : 
+
+          client/c123/deviceGroups/e123/netmore/raw
+             |    |        |         |      |     | 
+             |    |        |         |      |   raw - Raw data packet. 
+             |    |        |         |   Constant identifier
+             |    |        |       Device groups identifier
+             |    |     Constant identifier.
+             |   Your customerId.
+          Client is a constant prefix.
+
+## Payload Sample
 Message topic: client/c123/deviceGroups/e123/netmore/raw
 
     [
       {
-          deviceId: 'lorac@blink@uwpa@0019eeb000000xxx',
+          deviceId: '12312355eb000000xxx-de',
           deviceGroupId: 'e123'
           devEui: 'a81758ffxxxxxx',
           sensorType: 'elt_2_hp',
@@ -133,7 +137,7 @@ Message topic: client/c123/deviceGroups/e123/netmore/raw
     ]
 
 
-# Version 1
+# Version 1 (DEPRECATED)
 ## Payload Description V1
 
       [{
@@ -143,7 +147,7 @@ Message topic: client/c123/deviceGroups/e123/netmore/raw
         n: name (string),
         u: unit (string),
         v: value 
-        tags?: tags that are assosiated with the sensor.
+        tags?: tags that are associated with the sensor.
       }]
 ## Topic Description V1
     
@@ -159,22 +163,6 @@ Message topic: client/c123/deviceGroups/e123/netmore/raw
              |    |    |    |      |     |  |  packet source
              |    |    |    |      |     | Constant identifier
              |    |    |    |      |   dp - Data point.
-             |    |    |    |   Constant identifier
-             |    |    |   The Edge Id aka group id.
-             |    |  Constant identifier.
-             |   Your customerId.
-          Client is a constant prefix.
-
-  Sample Raw: V1
-
-          client/c123/edge/e123/netmore/raw/evt/lorac/blink/elt_2_hp/a81758ffxxxxxx
-             |    |    |    |      |     |  |    |       |     |            |
-             |    |    |    |      |     |  |    |       |     |        Sensor Id
-             |    |    |    |      |     |  |    |       |  Sensor Type
-             |    |    |    |      |     |  |    |    Backend 
-             |    |    |    |      |     |  |  packet sourc 
-             |    |    |    |      |     | Constant identifier             
-             |    |    |    |      |   raw - Raw data packet. 
              |    |    |    |   Constant identifier
              |    |    |   The Edge Id aka group id.
              |    |  Constant identifier.
@@ -211,36 +199,6 @@ Message topic: client/c123/edge/e123/netmore/dp/evt/lorac/blink/uwpa/0019eeb0000
       }
     ]
 
-Message topic: client/c123/edge/e123/netmore/raw/evt/lorac/blink/elt_2_hp/a81758ffxxxxxx 
-
-    [
-      {
-        t: 1693849603079,
-        n: 'raw',
-        u: 'json',
-        v: {
-          devEui: 'a81758ffxxxxxx',
-          sensorType: 'elt_2_hp',
-          messageType: 'payload',
-          timestamp: '2023-09-04T17:46:43.079435Z',
-          payload: '0100910262070e380b00031bd51700000973',
-          fCntUp: 76533,
-          toa: null,
-          freq: 867300000,
-          batteryLevel: '254',
-          ack: false,
-          spreadingFactor: '7',
-          dr: 5,
-          rssi: '-87',
-          snr: '11',
-          gatewayIdentifier: '773',
-          fPort: '5',
-          latitude: 67.806233,
-          longitude: 11.685214,
-          gateways: [Array]
-        }
-      }
-    ]
 
 # Developer recommendations
 When creating the client subscription there are a few thinks to take into considerations.
@@ -325,4 +283,4 @@ Note that not all sensors can be harmonized.
 | pulseCounter2 | number | count absolute values; |
 | pulseIntervalCounter2 | number | count resets for each send. |
 
-Other values might be avalible for specifice devices as not all values have any sense in harmonizing as thy are sensor specific.
+Other values might be available for specific devices as not all values have any sense in harmonizing as thy are sensor specific.
